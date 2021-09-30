@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="25dp"
+            android:text="@string/_15_squares_puzzle"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9800"
+            android:backgroundTint="#FF9800"
+            android:maxWidth="50dp"
+            android:minWidth="30dp"
+            android:text="@string/reset_board"
+            android:textAlignment="center"
+            android:textColor="#33691E"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/bText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/click_a_button" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="50dp"
+            android:paddingStart="50dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="50dp"
+            android:paddingEnd="50dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="50dp"
+            app:columnCount="2"
+            app:rowCount="2">
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2" />
+
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3" />
+
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4" />
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
