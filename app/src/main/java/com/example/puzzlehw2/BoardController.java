@@ -10,6 +10,7 @@ public class BoardController implements View.OnClickListener {
     private BoardView boardView;
     private BoardModel boardModel;
     //public Color;
+    int[][] randomBoard = new int[4][4];  //board to hold randomized positions
 
     int[][] boardPositions =
             //array which holds the number of each position on the board
@@ -22,7 +23,7 @@ public class BoardController implements View.OnClickListener {
                     {13,14,15,16}
             };
 
-    int[][] randomBoard = new int[4][4];
+
 
 
     public BoardController(BoardView bv){
@@ -37,16 +38,13 @@ public class BoardController implements View.OnClickListener {
 
     public boolean isBoardComplete(int[][]correctBoard, int[][]currentBoard){
 
-        for (int r = 0; r < 3; r++){
-            for (int c = 0; c < 3; c++){
+        for (int r = 0; r < 4; r++){
+            for (int c = 0; c < 4; c++){
                 if (correctBoard[r][c] != currentBoard[r][c]){
                     return false;
                 }
-
-
             }
         }
-
         //if its true, just set the background of the game to be green
         return true;
     }
@@ -60,8 +58,8 @@ public class BoardController implements View.OnClickListener {
         }
 
 
-        for (int r = 0; r < 3; r++){
-            for (int c = 0; c < 3; c++){
+        for (int c = 0; c < 4; c++){
+            for (int r = 0; r < 4; r++){
                 int randomIndex = (int)Math.random() * randArrayList.size();
                 randomBoard[r][c] = randArrayList.get(randomIndex);
                 randArrayList.remove(randomIndex);
@@ -72,7 +70,7 @@ public class BoardController implements View.OnClickListener {
     }
 
     //if theres a click, check the 4 surrounding sides
-    //and switch the button labels with the first blank space you find
+    //and switch the array values with the first blank space you find
     public void move(int[][]randomBoard, int r, int c){
 
         if (checkAbove(r, c, randomBoard)){
@@ -110,8 +108,6 @@ public class BoardController implements View.OnClickListener {
         return randomBoard[r + 1][c] == 16;  //return whether or not space
         //above clicked button is blank (value 16)
     }
-
-
 
     public boolean checkBelow(int r, int c, int[][]randomBoard){
         randomBoard = this.randomBoard;
