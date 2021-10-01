@@ -3,7 +3,6 @@ package com.example.puzzlehw2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,13 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button b1 = (Button) findViewById(R.id.b1);
         Button b2 = (Button) findViewById(R.id.b2);
         Button b3 = (Button) findViewById(R.id.b3);
-        Button b4 = (Button) findViewById(R.id.b4);
+        Button bEmpty = (Button) findViewById(R.id.bEmpty);
 
         //setOnClickListeners for all buttons
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
         b3.setOnClickListener(this);
-        b4.setOnClickListener(this);
+        bEmpty.setOnClickListener(this);
 
 
         //ButtonController controller = new ButtonController(b);
@@ -50,9 +49,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.b3:
                 textView.setText(R.string._3);
                 break;
-            case R.id.b4:
-                textView.setText(R.string._4);
+            case R.id.bEmpty:
+                textView.setText(R.string.empty);
                 break;
+
+
+            }
+
         }
     }
-}
