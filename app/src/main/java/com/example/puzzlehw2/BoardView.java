@@ -8,12 +8,12 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
 
-public class BoardView extends SurfaceView{
+public class BoardView{
 
     private TextView textView;
 
-    public BoardView(Context context) {
-        super(context);
+    public BoardView() {
+        //super();
     }
 
     public void onDraw(Canvas canvas) {

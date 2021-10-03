@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -55,7 +56,7 @@
             app:columnCount="4"
             app:rowCount="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,7 +64,7 @@
                 android:text="@string/_1"
                 android:textColor="#000000" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +72,7 @@
                 android:text="@string/_2"
                 android:textColor="#000000" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,25 +80,25 @@
                 android:text="@string/_3"
                 android:textColor="#000000" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_4" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_5" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_6" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,49 +110,49 @@
                 android:layout_height="wrap_content"
                 android:text="@string/_8" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_9" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_10" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_11" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_12" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_13" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_14" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/b15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_15" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/bEmpty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

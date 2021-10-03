@@ -3,6 +3,7 @@ package com.example.puzzlehw2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,16 +11,19 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView textView;
-    BoardView boardView = new BoardView(this);
+    BoardView boardView = new BoardView();
     BoardController controller = new BoardController(boardView);
     Button[][] buttonsArray = new Button[4][4];
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("check", "main activity running");
 
         //create a textView that says which button was clicked
+        //delete later
         textView = findViewById(R.id.bText);
 
         //create the buttons, assign to a findViewById
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button b15 = (Button) findViewById(R.id.b15);
         Button bEmpty = (Button) findViewById(R.id.bEmpty);
 
+        //couldn't intstanitate array with for loops, had to do it manually
         buttonsArray[0][0] = b1;
         buttonsArray[0][1] = b2;
         buttonsArray[0][2] = b3;
@@ -58,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonsArray[3][3] = bEmpty;
 
 //
+        //sets the text on each button to what is in on randomBoard
         for (int c = 0; c < 4 ; c++){
             for (int r = 0; r < 4; r++){
                buttonsArray[r][c].setText(controller.randomBoard[r][c]);
